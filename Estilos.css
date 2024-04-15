@@ -1,0 +1,628 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+
+:root{
+    --Verde: #0c443a;
+    --Sena: #25d1b2;
+    --Degradado: linear-gradient(90deg, var(--Sena),var(--Verde));
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+}
+
+*::selection{
+    background: var(--Sena);
+    color: white;
+}
+
+html{
+    font-size: 62.4%;
+    overflow-x: hidden;
+}
+
+body{
+    background: #f9f9f9;
+}
+
+section{
+    min-height: 100vh;
+    padding: 0 9%;
+    padding-top: 7.5rem;
+    padding-bottom: 2rem;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .8rem 3rem;
+    border-radius: 5rem;
+    background: var(--Degradado);
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 1.5rem 1rem rgba(0, 0, 0, .1);
+    transition: all .3s linear;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+}
+
+.Heading{
+    text-align: center;
+    background: var(--Verde);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    padding: 1rem;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+header .logo{
+    font-size: 2.5rem;
+    color: var(--Verde);
+}
+
+header .logo span{
+    color: var(--Sena);
+}
+
+header .navbar a{
+    font-size: 1.8rem;
+    margin-left: 2rem;
+    color: var(--Verde);
+}
+
+header .navbar a:hover{
+    color: var(--Sena);
+}
+
+header input{
+    display: none;
+}
+
+header label{
+    font-size: 3rem;
+    color: var(--Verde);
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.Inicio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(Img/inicio_fondo.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.Inicio .Image img{
+    width: 40vw;
+    animation: float 3s linear infinite;
+}
+
+@keyframes float{
+    0%, 100%{
+        transform:translateY(0rem);
+    }
+    50%{
+        transform: translateY(-3.5rem);
+    }
+}
+
+.Inicio .Content h3{
+    font-size: 5.5rem;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.Inicio .Content h3 span{
+    color: var(--Sena);
+    text-transform: uppercase;
+}
+
+.Inicio .Content p{
+    font-size: 1.7rem;
+    color: #666;
+    padding: 1rem 0;
+}
+
+.Detalles .Caja-contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.Detalles .Caja-contenedor .Caja{
+    flex: 1 1 30rem;
+    background: white;
+    border-radius: 0.5rem;
+    border: .1rem solid rgba(0, 0, 0, .2);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    margin: 1.5rem;
+    padding: 3rem 2rem;
+    border-radius: .5rem;
+    text-align: center;
+    transition: .2s linear;
+}
+
+.Detalles .Caja-contenedor .Caja img{
+    height: 15rem;
+}
+
+.Detalles .Caja-contenedor .Caja h3{
+    font-size: 2rem;
+    color: #333;
+    padding-top: 1rem;
+}
+
+.Detalles .Caja-contenedor .Caja p{
+    font-size: 1.3rem;
+    color: #666;
+    padding: 1rem 0;
+}
+
+.Acerca_de{
+    background: url(Img/fondo_2.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 3rem;
+}
+
+.Acerca_de .Columna{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.Acerca_de .Columna .Image{
+    flex: 1 1 40rem;
+}
+
+.Acerca_de .Columna .Image img{
+    width: 100%;
+}
+
+.Acerca_de .Columna .Content{
+    flex: 1 1 40rem;
+}
+
+.Acerca_de .Columna .Content h3{
+    font-size: 3rem;
+    color: #333;
+}
+
+.Acerca_de .Columna .Content{
+    font-size: 1.5rem;
+    color: #666;
+    padding: 1rem 0;
+}
+
+.Acerca_de .Columna .Content .Bottons a:last-child{
+    margin-left: 2rem;
+}
+
+.Suscribete{
+    text-align: center;
+    padding: 5rem 1rem;
+    background: url(Img/fondo_sub.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.Suscribete h3{
+    color: white;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.Suscribete p{
+    color: whitesmoke;
+    font-size: 1.6rem;
+    margin: 2rem auto;
+    width: 70rem;
+}
+
+.Suscribete form{
+    display: flex;
+    max-width: 70rem;
+    border: .2rem solid whitesmoke;
+    padding: .5rem;
+    border-radius: 5rem;
+    margin: 2rem auto;
+    height: 5.5rem;
+}
+
+.Suscribete form input[type="Email"]{
+    padding: 0 2rem;
+    font-size: 1.7rem;
+    background: none;
+    width: 100%;
+    color: white;
+    text-transform: none;
+}
+
+.Suscribete form input[type="Email"]::placeholder{
+    color: whitesmoke;
+    text-transform: capitalize;
+}
+
+.Suscribete form input[type="Submit"]{
+    background: white;
+    width: 20rem;
+    font-size: 1.7rem;
+    border-radius: 5rem;
+    cursor: pointer;
+}
+
+.Suscribete form input[type="Submit"]:hover{
+    color: var(--Sena);
+}
+
+.Opiniones .Caja-contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.Opiniones .Caja-contenedor .Caja{
+    background: white;
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+    border: .1rem solid rgba(0, 0, 0, .2);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    flex: 1 1 30rem;
+    border-radius: .5rem;
+}
+
+.Opiniones .Caja-contenedor .Caja .fa-atom{
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    font-size: 8rem;
+    color: var(--Sena);
+    opacity: .3;
+}
+
+.Opiniones .Caja-contenedor .Caja .User img{
+    border-radius: 50%;
+    object-fit: cover;
+    height: 8rem;
+    width: 8rem;
+    margin-top: 2rem;
+}
+
+.Opiniones .Caja-contenedor .Caja .User h3{
+    color: var(--Verde);
+    font-size: 2rem;
+}
+
+.Opiniones .Caja-contenedor .Caja .User .Stars i{
+    color: var(--Verde);
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.Opiniones .Caja-contenedor .Caja .Comentarios{
+    color: #666;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.Precios .Caja-contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.Precios .Caja-contenedor .Caja{
+    flex: 1 1 25rem;
+    margin: 1rem;
+    padding: 1rem;
+    background: white;
+    border: .1rem solid rgba(0, 0, 0, .2);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    text-align: center;
+    padding-bottom: 3rem;
+}
+
+.Precios .Caja-contenedor .Caja:nth-child(2),
+.Precios .Caja-contenedor .Caja:hover{
+    border: .2rem solid var(--Sena);
+}
+
+.Precios .Caja-contenedor .Caja .Titulo{
+    color: var(--Verde);
+    font-size: 2.5rem;
+    padding-top: 1rem;
+}
+
+.Precios .Caja-contenedor .Caja .Tipos{
+    font-size: 4rem;
+    color: var(--Sena);
+    padding: 1rem 0;
+}
+
+.Precios .Caja-contenedor .Caja .Tipos span{
+    font-size: 2rem;
+}
+
+.Precios .Caja-contenedor .Caja ul{
+    padding: 1rem 0;
+    list-style: none;
+}
+
+.Precios .Caja-contenedor .Caja ul li{
+    font-size: 1.7rem;
+    color: #333;
+    padding: .5rem 0;
+}
+
+.Precios .Caja-contenedor .Caja ul li .fa-check{
+    color: lightgreen;
+}
+
+.Precios .Caja-contenedor .Caja ul li .fa-circle-xmark{
+    color: red;
+}
+
+.Contactos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 4rem;
+}
+
+.Contactos .Image{
+    flex: 1 1 40rem;
+}
+
+.Contactos .Image img{
+    width: 100%;
+    padding: 2rem;
+}
+
+.Contactos form{
+    flex: 1 1 40rem;
+    padding: 2rem 3rem;
+    border: .1rem solid rgba(0, 0, 0, .2);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    background: white;
+}
+
+.Contactos .Heading{
+    text-align: left;
+    padding: 0;
+    padding-bottom: 2rem;
+}
+
+.Contactos form .InputCaja{
+    position: relative;
+}
+
+.Contactos form .InputCaja input, .Contactos form .InputCaja textarea{
+    width: 100%;
+    background: none;
+    color: #333;
+    margin: 1.5rem 0;
+    padding: .5rem 0;
+    font-size: 1.7rem;
+    border-bottom: .1rem solid rgba(0, 0, 0, .1);
+    text-transform: none;
+}
+
+.Contactos form .InputCaja textarea{
+    resize: none;
+    height: 13rem;
+}
+
+.Contactos form .InputCaja label{
+    position: absolute;
+    top: 1.7rem;
+    left: 0;
+    font-size: 1.7rem;
+    color: #666;
+    transition: .2s linear;
+}
+
+.Contactos form .InputCaja input:focus ~ label,
+.Contactos form .InputCaja input:valid ~ label,
+.Contactos form .InputCaja textarea:focus ~ label,
+.Contactos form .InputCaja textarea:valid ~ label{
+    top: .5rem;
+    font-size: 1.5rem;
+    color: var(--Sena);
+}
+
+.Footer{
+    padding-top: 3rem;
+    background: url(Img/footer-fondo.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.Footer .Caja-contenedor{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Footer .Caja-contenedor .Caja{
+    flex: 1 1 25rem;
+}
+
+.Footer .Caja-contenedor .Caja h3{
+    font-size: 2.5rem;
+    padding: 1rem ;
+    color: wheat;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+}
+
+.Footer .Caja-contenedor .Caja p{
+    font-size: 1.5rem;
+    padding: .5rem 0;
+    color: whitesmoke;
+}
+
+.Footer .Caja-contenedor .Caja a{
+    display: block;
+    font-size: 1.5rem;
+    padding: .5rem 0;
+    color: wheat; 
+}
+
+.Footer .Caja-contenedor .Caja a:hover{
+    text-decoration: underline;
+}
+
+.Footer .Caja-contenedor .Caja .Info{
+    display: flex;
+    align-items: center;
+}
+
+.Footer .Caja-contenedor .Caja .Info i{
+    margin: .5rem 0;
+    margin-right: 1rem;
+    border-radius: 50%;
+    background: whitesmoke;
+    color: var(--Sena);
+    font-size: 1.8rem;
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    text-align: center;
+}
+
+.Footer .Creditos{
+    font-size: 2rem;
+    font-weight: normal;
+    letter-spacing: .1rem;
+    color: wheat;
+    border-top: .1REM solid wheat;
+    padding: 2.5re, 1rem;
+    text-align: center;
+}
+
+@media(max-width: 1200px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media(max-width:990px){
+    section{
+        padding: 0 3%;
+        padding-top: 7.5rem;
+        padding-bottom: 2rem;
+    }
+}
+
+@media(max-width:768px){
+    header label{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 1rem 2rem;
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        transform-origin: top;
+        transform: scaleY(0);
+        opacity: 0;
+        transition: .2s linear;
+    }
+
+    header .navbar a{
+        display: block;
+        margin: 2rem 0;
+        font-size: 2rem;
+    }
+
+    header input:checked ~ .navbar{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+
+    header input:checked ~ label::before{
+        content:'\f00d';
+    }
+
+    .Inicio{
+        flex-flow: column-reverse;
+    }
+
+    .Inicio .Image img{
+        width: 100%;
+    }
+
+    .Inicio .Content He{
+        font-size: 3.6rem;
+    }
+
+    .Inicio .Content p{
+        font-size: 1.5rem;
+    }
+
+    .Acerca_de{
+        background-position: right;
+    }
+
+    .Suscribete p{
+        width: auto;
+    }
+
+}
+
+@media(max-width:450px){
+    html{
+        font-size: 49%;
+    }
+
+    .Acerca_de .Columna .Content .Bottons a{
+        width: 100%;
+        text-align: center;
+    }
+
+    .Acerca_de .Columna .Content .Bottons a{
+        margin: 1rem 0;
+    }
+}
